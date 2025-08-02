@@ -12,7 +12,7 @@ window.onload = function() {
 // Function to fetch all the posts from the API and display them on the page
 function loadPosts() {
     // Retrieve the base URL from the input field and save it to local storage
-    var baseUrl = document.getElementById('api-base-url').value;
+    var baseUrl = "https://vocalwatch-eveninggate-5002.codio.io/api";
     localStorage.setItem('apiBaseUrl', baseUrl);
 
     // Use the Fetch API to send a GET request to the /posts endpoint
@@ -38,7 +38,7 @@ function loadPosts() {
 // Function to send a POST request to the API to add a new post
 function addPost() {
     // Retrieve the values from the input fields
-    var baseUrl = document.getElementById('api-base-url').value;
+    var baseUrl = "https://vocalwatch-eveninggate-5002.codio.io/api";
     var postTitle = document.getElementById('post-title').value;
     var postContent = document.getElementById('post-content').value;
 
@@ -58,7 +58,7 @@ function addPost() {
 
 // Function to send a DELETE request to the API to delete a post
 function deletePost(postId) {
-    var baseUrl = document.getElementById('api-base-url').value;
+    var baseUrl = "https://vocalwatch-eveninggate-5002.codio.io/api";
 
     // Use the Fetch API to send a DELETE request to the specific post's endpoint
     fetch(baseUrl + '/posts/' + postId, {
@@ -70,3 +70,6 @@ function deletePost(postId) {
     })
     .catch(error => console.error('Error:', error));  // If an error occurs, log it to the console
 }
+
+console.log("JS loaded");
+
